@@ -6,7 +6,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import logo from "/home/azhar/folio/public/projects/logo.png"
+// import logo from "/home/azhar/folio/public/projects/logo.png"
 import Menu from "@/components/common/menu";
 
 const Header = () => {
@@ -16,12 +16,12 @@ const Header = () => {
     <header className="w-full fixed top-0 py-8 select-none z-50 bg-gradient-to-b from-gray-900 to-transparent">
       <div className="flex justify-between section-container">
         <a href="#home" className="link">
-          <Image
+          {/* <Image
             src={logo}
             alt="Logo - Azhar Ahmed"
             width={142}
             height={22}
-          />
+          /> */}
         </a>
         <nav className={`outer-menu ${menuVisible ? "menu-visible" : ""}`}>
           <button
