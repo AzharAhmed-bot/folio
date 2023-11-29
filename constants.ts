@@ -5,10 +5,10 @@
 // License text available at https://opensource.org/licenses/MIT
 
 export const METADATA = {
-  title: "Portfolio | Ayush Singh",
+  title: "Portfolio | Azhar Ahmed",
   description:
     "I bridge the gap between design and development. I take responsibility to craft an aesthetic user experience using modern frontend architecture.",
-  siteUrl: "https://ayushsingh.net/",
+
 };
 
 export const MENULINKS = [
@@ -25,10 +25,6 @@ export const MENULINKS = [
     ref: "skills",
   },
   {
-    name: "Timeline",
-    ref: "timeline",
-  },
-  {
     name: "Contact",
     ref: "contact",
   },
@@ -38,21 +34,16 @@ export const TYPED_STRINGS = [
   "I design and develop things",
   "I develop modern frontend apps",
   "I design dynamic user experience",
-  "I design and develop motion",
+  "I design and develop backend services",
 ];
 
-export const EMAIL = "ayush.singh.xda@gmail.com";
+export const EMAIL = "azharahmedtakoy4444@gmail.com";
 
 export const SOCIAL_LINKS = {
-  linkedin: "https://www.linkedin.com/in/alphaayush/",
-  github: "https://github.com/ayush013",
-  medium: "https://alphaayush.medium.com/",
-  instagram: "https://www.instagram.com/alphaayush/",
-  facebook: "https://www.facebook.com/ayush013",
-  dribbble: "https://dribbble.com/alphaayush",
-  behance: "https://www.behance.net/alphaayush/",
-  twitter: "https://twitter.com/ayush013",
-  topmate: "https://www.topmate.io/alphaayush/",
+  whatsapp:"https://wa.me/+254773470576",
+  gmail:"mailto:azharahmedtakoy4444@gmail.com",
+  github: "https://github.com/AzharAhmed-bot",
+
 };
 
 export interface IProject {
@@ -67,131 +58,65 @@ export interface IProject {
 
 export const PROJECTS: IProject[] = [
   {
-    name: "FigGen - Figma to Code converter",
-    image: "/projects/figgen.jpg",
-    blurImage: "/projects/blur/figgen-blur.jpg",
-    description: "Pixel perfect HTML/Tailwind for Figma Auto layout designs.",
+    name: "Wazat Travel Agency",
+    image: "/projects/Wazat.jpg",
+    blurImage: "/projects/Wazat.jpg",
+    description: "This was my first ever project that is based on making it easy on booking buses across Kenya.",
     gradient: ["#1F6582", "#1ABCFE"],
-    url: "https://www.figma.com/community/plugin/1065278044402066626",
-    tech: ["typescript", "figma", "tailwind"],
+    url: "https://naibusbooking.netlify.app/",
+    tech: ["react", "javascript"],
   },
   {
-    name: "myOKR Website",
-    image: "/projects/myokr.jpg",
-    blurImage: "/projects/blur/myokr-blur.jpg",
-    description: "Marketing site for OKR Platform by huminos",
+    name: "AirVoyage Travel Website",
+    image: "/projects/AirVoyage.jpg",
+    blurImage: "/projects/AirVoyage.jpg",
+    description: "It's a web App that makes it easy for users to book a wide range of Airlines across Africa and book then with user defined prices.",
     gradient: ["#153BB9", "#0E2C8B"],
-    url: "https://www.huminos.com/",
-    tech: ["react", "next", "gsap", "tailwind"],
+    url: "https://airvoyage.netlify.app/",
+    tech: ["react", "flask", "sqlite"],
   },
   {
-    name: "DLT Labs Website",
-    image: "/projects/dlt-website.jpg",
-    blurImage: "/projects/blur/dlt-website-blur.jpg",
-    description: "Marketing site with an Internal CMS from scratch",
+    name: "Valetroni Car Dealership",
+    image: "/projects/Valetroni.jpg",
+    blurImage: "/projects/Valetroni.jpg",
+    description: "Step into the future of car buying with Valetroni Car Dealership. Imagine browsing and purchasing your dream car from global dealers, all at your fingertips.",
     gradient: ["#245B57", "#004741"],
-    url: "https://www.dltlabs.com/",
-    tech: ["figma", "angular", "gsap"],
+    url: "https://valetroni.netlify.app/",
+    tech: ["react", "fastapi", "sqlite"],
   },
   {
-    name: "DL Unify",
-    image: "/projects/dl-unify.jpg",
-    blurImage: "/projects/blur/dl-unify-blur.jpg",
-    description: "Built the application from zero to production 🚀",
+    name: "Health HubWise ",
+    image: "/projects/Health.jpg",
+    blurImage: "/projects/Health.jpg",
+    description: "Experience healthcare reimagined with Health Tracker Website. Seamlessly connect with medical professionals, receive personalized insights, and monitor your well-being. Powered by AI-driven symptom analysis, virtual consultations have never been this comprehensive and convenient.",
     gradient: ["#003052", "#167187"],
-    url: "https://dlunify.com/",
-    tech: ["tailwind", "angular", "gsap", "figma"],
+    url: "https://healthhubwise.netlify.app/",
+    tech: ["tailwind", "react", "flask"],
   },
   {
-    name: "ngx-quill-upload",
-    image: "/projects/ngx-quill-upload.jpg",
-    blurImage: "/projects/blur/ngx-quill-upload-blur.jpg",
-    description: "NPM Package for Quill JS uploads from Angular",
+    name: "NorthLink Gsc Limited",
+    image: "/projects/northlink.jpg",
+    blurImage: "/projects/northlink.jpg",
+    description: "NorthLink is a construction Company Based in Kenya aimed at providing sustainable construction,electrical and energy solution to transform dreams into landmarks for prosperity.",
     gradient: ["#3A0000", "#771E1E"],
-    url: "https://www.npmjs.com/package/ngx-quill-upload",
-    tech: ["npm", "angular", "typescript"],
+    url: "https://northlink-gsc.netlify.app/",
+    tech: ["react", "fastapi", "javascript"],
   },
-  {
-    name: "Huminos website",
-    image: "/projects/huminos.jpg",
-    blurImage: "/projects/blur/huminos-blur.jpg",
-    description: "Marketing site for Huminos bots for workplace by facebook",
-    gradient: ["#17007B", "#3A2C79"],
-    url: "https://bots.huminos.com/",
-    tech: ["javascript", "sass", "svg", "gulp"],
-  },
-  {
-    name: "AKGEC - College Website",
-    image: "/projects/akgec.jpg",
-    blurImage: "/projects/blur/akgec-blur.jpg",
-    description: "Contributed in overall design and development",
-    gradient: ["#5E4C06", "#746528"],
-    url: "https://www.akgec.ac.in/",
-    tech: ["javascript", "html", "css"],
-  },
-  {
-    name: "Alpha Aesthetics",
-    image: "/projects/alpha.jpg",
-    blurImage: "/projects/blur/alpha-blur.jpg",
-    description: "Designed and developed the platform",
-    gradient: ["#172839", "#334659"],
-    url: "https://alpha-aesthetics.ayushsingh.net/",
-    tech: ["illustrator", "javascript", "angular"],
-  },
-  {
-    name: "Amantrya - Polling Web App",
-    image: "/projects/farewell18.jpg",
-    blurImage: "/projects/blur/farewell18-blur.jpg",
-    description: "Dark mode dated from 2017 🔥",
-    gradient: ["#142D46", "#2E4964"],
-    url: "https://farewell18.ayushsingh.net/",
-    tech: ["javascript", "html", "css"],
-  },
-  {
-    name: "BDC 2018 Web Portal",
-    image: "/projects/bdc18.jpg",
-    blurImage: "/projects/blur/bdc18-blur.jpg",
-    description: "Built the portal from zero to production 🚀",
-    gradient: ["#470700", "#712A23"],
-    url: "https://bdc2018.ayushsingh.net/",
-    tech: ["javascript", "html", "css"],
-  },
-  {
-    name: "Scrolls 2017 - Website",
-    image: "/projects/scrolls.jpg",
-    blurImage: "/projects/blur/scrolls-blur.jpg",
-    description: "Built the portal from zero to production 🚀",
-    gradient: ["#685506", "#7B6921"],
-    url: "https://scrolls-17.ayushsingh.net/",
-    tech: ["angular", "html", "css"],
-  },
-  {
-    name: "Cardize - Visiting Cards",
-    image: "/projects/cardize.jpg",
-    blurImage: "/projects/blur/cardize-blur.jpg",
-    description: "First web project! Custom visiting card generator",
-    gradient: ["#552A04", "#614023"],
-    url: "https://cardize.ayushsingh.net/",
-    tech: ["javascript", "html", "css"],
-  },
+ 
 ];
 
 export const SKILLS = {
   frontend: [
     "javascript",
     "react",
-    "redux",
-    "next",
     "angular",
-    "gsap",
     "tailwind",
-    "sass",
-    "svg",
     "html",
     "css",
   ],
-  userInterface: ["figma", "sketch", "illustrator", "photoshop"],
-  other: ["git", "webpack", "gulp", "lightroom", "aftereffects"],
+  backend:["flask","fastapi","postgresql","sqlite"],
+  userInterface: ["figma", "wordpress"],
+  other: ["git","java"]
 };
 
 export enum Branch {
@@ -213,7 +138,7 @@ export enum ItemSize {
 export const TIMELINE: Array<TimelineNodeV2> = [
   {
     type: NodeTypes.CHECKPOINT,
-    title: "2023",
+    title: "2023 ",
     size: ItemSize.LARGE,
     shouldDrawLine: false,
     alignment: Branch.LEFT,

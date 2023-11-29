@@ -6,6 +6,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import logo from "/home/azhar/folio/public/projects/logo.png"
 import Menu from "@/components/common/menu";
 
 const Header = () => {
@@ -16,9 +17,9 @@ const Header = () => {
       <div className="flex justify-between section-container">
         <a href="#home" className="link">
           <Image
-            src="/logo.svg"
-            alt="Logo - Ayush Singh"
-            width={22}
+            src={logo}
+            alt="Logo - Azhar Ahmed"
+            width={142}
             height={22}
           />
         </a>

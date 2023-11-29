@@ -30,7 +30,7 @@ const Footer = () => {
       </h1>
       <div className="flex mt-8">{renderSocialIcons()}</div>
       <div className="flex mt-8">
-        <Button
+        {/* <Button
           classes="mr-3"
           type={ButtonTypes.OUTLINE}
           name="Resume"
@@ -39,12 +39,12 @@ const Footer = () => {
             rel: "noreferrer",
           }}
           href="/Ayush_Resume.pdf"
-        ></Button>
+        ></Button> */}
         <Button
           classes="ml-3"
           type={ButtonTypes.WHITE}
           name="Let's Talk"
-          href={SOCIAL_LINKS.topmate}
+          href={"mailto:azharahmedtakoy4444@gmail.com"}
           otherProps={{
             target: "_blank",
             rel: "noreferrer",
@@ -52,12 +52,12 @@ const Footer = () => {
         ></Button>
       </div>
       <h2 className="text-center text-sm sm:text-base mt-8">
-        Designed and Developed with ❤️ by Ayush
+        Designed and Developed with ❤️ by Azhar and  Ayush's
       </h2>
     </>
   );
 
-  const { ref: footerRef } = MENULINKS[4];
+  const { ref: footerRef } = MENULINKS[3];
 
   return (
     <footer
