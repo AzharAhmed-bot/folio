@@ -52,7 +52,7 @@ const Footer = () => {
         ></Button>
       </div>
       <h2 className="text-center text-sm sm:text-base mt-8">
-        Designed and Developed with ❤️ by Azhar and  Ayush's
+        Designed and Developed with ❤️ by Azhar and  Ayush
       </h2>
     </>
   );
@@ -64,7 +64,7 @@ const Footer = () => {
       className="w-full relative select-none bg-cover flex flex-col items-stretch"
       id={footerRef}
     >
-      <img
+      <Image
         src="/footer-curve.svg"
         alt="Footer"
         className="w-full"

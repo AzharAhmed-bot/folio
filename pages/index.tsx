@@ -43,20 +43,21 @@ export default function Home() {
 
   let timer: NodeJS.Timeout = null;
 
-  const debouncedDimensionCalculator = () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      const isDesktopResult =
-        typeof window.orientation === "undefined" &&
-        navigator.userAgent.indexOf("IEMobile") === -1;
-
-      window.history.scrollRestoration = "manual";
-
-      setisDesktop(isDesktopResult);
-    }, DEBOUNCE_TIME);
-  };
+  
 
   useEffect(() => {
+    const debouncedDimensionCalculator = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const isDesktopResult =
+          typeof window.orientation === "undefined" &&
+          navigator.userAgent.indexOf("IEMobile") === -1;
+  
+        window.history.scrollRestoration = "manual";
+  
+        setisDesktop(isDesktopResult);
+      }, DEBOUNCE_TIME);
+    };
     debouncedDimensionCalculator();
 
     window.addEventListener("resize", debouncedDimensionCalculator);
