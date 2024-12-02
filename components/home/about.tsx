@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // Copyright Ayush Singh 2021,2022. All Rights Reserved.
 // Project: folio
 // Author contact: https://www.linkedin.com/in/alphaayush/
