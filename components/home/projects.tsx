@@ -132,7 +132,7 @@ const ProjectsSection = ({ isDesktop }: IDesktop) => {
       <h1 className="section-heading seq mt-2">My Works</h1>
       <h2 className="text-2xl md:max-w-3xl w-full seq max-w-sm mt-2">
         I have contributed and worked in 6 projects ranging from Frontend
-        development, Backend Development and  Open Source projects.
+        development, Backend Development and  Open Source projects. Click on cards to view the project
       </h2>
     </div>
   );

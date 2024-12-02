@@ -69,7 +69,7 @@ const AboutSection = () => {
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        I am a passionate Junior Software developer who is passionate about Artificial Intelligence.{" "}
+        I'm a software engineer with a versatile, well-rounded approach to development. I specialize in crafting algorithms that deliver next-level solutions.{" "}
       </span>
       <span
         className={`about-2 leading-tight ${

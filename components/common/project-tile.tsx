@@ -1,9 +1,3 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 import styles from "./ProjectTile.module.scss";
 import Image from "next/image";
 import React, { MutableRefObject, useEffect, useRef } from "react";
@@ -29,84 +23,28 @@ const ProjectTile = ({
 
   useEffect(() => {
     VanillaTilt.init(projectCard.current, {
-      max: 5,
-      speed: 400,
+      max: 8,
+      speed: 500,
       glare: true,
-      "max-glare": 0.2,
-      gyroscope: false,
+      "max-glare": 0.3,
+      scale: 1.05,
+      gyroscope: true,
     });
   }, [projectCard]);
 
   const renderTechIcons = (techStack: string[]): React.ReactNode => (
-    <div
-      className={`
-      ${styles.techIcons} w-1/2 h-full absolute left-24 top-0 sm:flex items-center hidden
-    `}
-    >
-      <div className="flex flex-col pb-8">
-        {techStack.map((tech, i) => (
-          <div className={`${i % 2 === 0 && "ml-16"} mb-4`} key={tech}>
-            <Image
-              src={`/projects/tech/${tech}.svg`}
-              alt={tech}
-              height={45}
-              objectFit="contain"
-              width={45}
-            />
-          </div>
-        ))}
-      </div>
+    <div className={`${styles.techIcons} flex flex-wrap gap-4 mt-4`}>
+      {techStack.map((tech) => (
+        <div key={tech}>
+          <Image
+            src={`/projects/tech/${tech}.svg`}
+            alt={tech}
+            height={40}
+            width={40}
+          />
+        </div>
+      ))}
     </div>
-  );
-
-  const renderDescription = (description: string): React.ReactNode => (
-    <h2
-      className="text-lg z-10 tracking-wide font-medium"
-      style={{ transform: "translateZ(0.8rem)" }}
-    >
-      {description}
-    </h2>
-  );
-
-  const renderProjectName = (name: string): React.ReactNode => (
-    <h1
-      className="text-2xl sm:text-3xl z-10 pl-2"
-      style={{ transform: "translateZ(3rem)" }}
-    >
-      {name}
-    </h1>
-  );
-
-  const renderTopBottomGradient = (gradient: string): React.ReactNode => (
-    <>
-      <div
-        className="absolute top-0 left-0 w-full h-20"
-        style={{
-          background: `linear-gradient(180deg, ${gradient} 0%, rgba(0,0,0,0) 100%)`,
-        }}
-      ></div>
-      <div
-        className="absolute bottom-0 left-0 w-full h-32"
-        style={{
-          background: `linear-gradient(0deg, ${gradient} 10%, rgba(0,0,0,0) 100%)`,
-        }}
-      ></div>
-    </>
-  );
-
-  const renderProjectImage = (
-    image: string,
-    blurImage: string,
-    name: string
-  ): React.ReactNode => (
-    <Image
-      placeholder="blur"
-      blurDataURL={blurImage}
-      src={image}
-      alt={name}
-      layout="fill"
-      className={`${styles.ProjectImg} z-0`}
-    />
   );
 
   return (
@@ -114,36 +52,42 @@ const ProjectTile = ({
       href={project.url}
       target="_blank"
       rel="noreferrer"
-      className="link overflow-hidden rounded-3xl snap-start"
+      className="rounded-xl transform transition-transform duration-300 hover:scale-105"
       style={{
         maxWidth: animationEnabled
           ? "calc(100vw - 2rem)"
           : "calc(100vw - 4rem)",
         flex: "1 0 auto",
-        WebkitMaskImage: "-webkit-radial-gradient(white, black)",
+        overflow: "hidden",
       }}
     >
       <div
         ref={projectCard}
-        className={`
-          ${styles.ProjectTile}
-           rounded-3xl relative p-6 flex-col flex justify-between max-w-full
-        `}
+        className={`${styles.ProjectTile} relative p-6 flex flex-col justify-between rounded-xl shadow-lg`}
         style={{
-          background: `linear-gradient(90deg, ${stop1} 0%, ${stop2} 100%)`,
+          background: `linear-gradient(135deg, ${stop1} 0%, ${stop2} 100%)`,
+          boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
         }}
       >
         <Image
           src="/project-bg.svg"
-          alt="Project"
+          alt="Background"
           layout="fill"
-          className="absolute w-full h-full top-0 left-0 opacity-20"
+          className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none"
         />
-        {renderProjectImage(image, blurImage, name)}
-        {renderTopBottomGradient(stop1)}
-        {renderProjectName(name)}
-        {renderTechIcons(tech)}
-        {renderDescription(description)}
+        <div className="z-10 relative">
+          <h1 className="text-2xl font-bold mb-2 text-white">{name}</h1>
+          <p className="text-sm text-gray-200 leading-relaxed">{description}</p>
+          {renderTechIcons(tech)}
+        </div>
+        <Image
+          placeholder="blur"
+          blurDataURL={blurImage}
+          src={image}
+          alt={name}
+          layout="fill"
+          className={`${styles.ProjectImg} z-0 object-cover rounded-xl`}
+        />
       </div>
     </a>
   );
