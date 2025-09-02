@@ -38,7 +38,6 @@ const ProjectsSection = () => {
               <ProjectTile
                 key={project.name}
                 project={project}
-                animationEnabled={false}
               />
             ))}
           </div>

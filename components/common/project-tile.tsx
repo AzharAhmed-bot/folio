@@ -32,9 +32,9 @@ const ProjectTile = ({ project }: { project: IProject }) => {
           blurDataURL={blurImage}
           src={image}
           alt={name}
-          layout="fill"
-          objectFit="cover"
           className="transition-transform duration-500 group-hover:scale-110"
+          width={200}
+          height={200}
         />
       </div>
 

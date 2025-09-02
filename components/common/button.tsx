@@ -17,11 +17,11 @@ export enum ButtonTypes {
 type ButtonProps = {
   type: ButtonTypes;
   onClick?: () => void;
-  name?: string; // ✅ made optional
+  name?: string; 
   href?: string;
   classes?: string;
   otherProps?: Record<string, string>;
-  children?: ReactNode; // ✅ added children
+  children?: ReactNode;
 };
 
 const Button = ({
@@ -43,7 +43,7 @@ const Button = ({
       href={href}
       className={`${getButtonTypeStyles(type)} ${buttonClasses} ${classes}`}
     >
-      {children ?? name} {/* ✅ prefer children if provided, else fallback to name */}
+      {children ?? name}
     </a>
   );
 
@@ -62,7 +62,7 @@ Button.propTypes = {
   name: PropTypes.string,
   href: PropTypes.string,
   classes: PropTypes.string,
-  children: PropTypes.node, // ✅ added
+  children: PropTypes.node, 
 };
 
 export default Button;

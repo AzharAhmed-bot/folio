@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 interface OverviewPoint {
@@ -46,10 +47,12 @@ const ModernProjectPage: React.FC<ModernProjectPageProps> = ({ data }) => {
       <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center p-6 md:p-12 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src={data.heroImageSrc}
             alt={`${data.projectName} background`}
             className="w-full h-full object-cover scale-105 blur-sm"
+            width={1920}
+            height={1080}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
         </div>
@@ -95,10 +98,12 @@ const ModernProjectPage: React.FC<ModernProjectPageProps> = ({ data }) => {
           
           {/* Image */}
           <div className="relative group">
-            <img
+            <Image
               src={data.overviewImageSrc}
               alt={`${data.projectName} overview`}
               className="rounded-2xl shadow-xl transform transition-transform duration-500 group-hover:scale-105"
+              width={800}
+              height={600}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>

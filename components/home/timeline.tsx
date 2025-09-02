@@ -480,7 +480,6 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
               src={(item as CheckpointNode).slideImage || ""}
               key={`${(item as CheckpointNode).title}-${index}`}
               alt="Timeline"
-              layout="fill"
             />
           ))}
         </div>
