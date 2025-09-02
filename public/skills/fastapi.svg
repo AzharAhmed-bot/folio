@@ -1,1 +1,10 @@
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>FastAPI</title><path d="M12 0C5.375 0 0 5.375 0 12c0 6.627 5.375 12 12 12 6.626 0 12-5.373 12-12 0-6.625-5.373-12-12-12zm-.624 21.62v-7.528H7.19L13.203 2.38v7.528h4.029L11.376 21.62z"/></svg>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_64_176)">
+<path d="M8 0C3.58313 0 0 3.58313 0 8C0 12.4169 3.58313 16 8 16C12.4169 16 16 12.4169 16 8C16 3.58313 12.4169 0 8 0ZM7.58313 14.4128V9.39481H4.79369L8.80169 1.58719V6.60519H11.4871L7.58313 14.4128Z" fill="#009688"/>
+</g>
+<defs>
+<clipPath id="clip0_64_176">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

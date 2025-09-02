@@ -56,54 +56,182 @@ export interface IProject {
   tech: string[];
 }
 
-export const PROJECTS: IProject[] = [
+export interface IProject {
+  name: string;
+  image: string;
+  blurImage: string;
+  description: string;
+  gradient: [string, string];
+  url: string;
+  tech: string[];
+  learnMoreLink:string;
+}
+
+export interface IProjectCategory {
+  category: string;
+  icon: string;
+  projects: IProject[];
+}
+
+export const PROJECT_CATEGORIES: IProjectCategory[] = [
   {
-    name: "Strathmore University Lost and Found",
-    image: "/projects/lostandfound.png",
-    blurImage: "/projects/lostandfound.png",
-    description: "This is an Open source lost and found application in React and flask.",
-    gradient: ["#1F6582", "#1ABCFE"],
-    url: "https://github.com/AzharAhmed-bot/strathlostandfound",
-    tech: ["react", "javascript","flask"],
+    category: "🌐 Web Apps",
+    icon: "🌐",
+    projects: [
+      {
+        name: "Lost and Found System",
+        image: "/projects/lostandfound.png",
+        blurImage: "/projects/lostandfound.png",
+        description:
+          "An open-source lost and found application built in React and Flask.",
+        gradient: ["#1F6582", "#1ABCFE"],
+        url: "https://github.com/AzharAhmed-bot/strathlostandfound",
+        tech: ["react", "javascript", "flask"],
+        learnMoreLink:"/projects/lost-and-found"
+      },
+      {
+        name: "Fitness AI App",
+        image: "/projects/fitness.png",
+        blurImage: "/projects/fitness.png",
+        description:
+          "AI-powered fitness app with agentic AI for workouts & meals + voice AI for human-like conversations.",
+        gradient: ["#5C258D", "#4389A2"],
+        url: "#",
+        tech: ["react", "typescript", "ai"],
+        learnMoreLink:"/projects/fitness-ai"
+      },
+      {
+        name: "Goomza Chatbot",
+        image: "/projects/goomza.png",
+        blurImage: "/projects/goomza.png",
+        description:
+          "LMS chatbot system with conversation builder and multi-channel management.",
+        gradient: ["#153BB9", "#0E2C8B"],
+        url: "#",
+        tech: ["node", "chatbot", "whatsapp-api"],
+        learnMoreLink:"/projects/goomza-chatbot"
+      },
+      {
+        name: "Quantum-Secure Chat",
+        image: "/projects/quantumchat.png",
+        blurImage: "/projects/quantumchat.png",
+        description:
+          "Chat app with messages encrypted against quantum computers.",
+        gradient: ["#3A0000", "#771E1E"],
+        url: "#",
+        tech: ["react", "encryption", "security"],
+        learnMoreLink:"/projects/quantum-chat"
+      },
+    ],
   },
   {
-    name: "SHEILD LMS and Donation Web App",
-    image: "/projects/shield.png",
-    blurImage: "/projects/shield.png",
-    description: "This is a profile for SHIELD,a start up company that I joined as a software Engineer to design their site and a LMS to provide access to resources to underprivileged communites.",
-    gradient: ["#153BB9", "#0E2C8B"],
-    url: "https://shieldintl.org/hello/",
-    tech: ["sass"],
+    category: "🤖 Agents",
+    icon: "🤖",
+    projects: [
+      {
+        name: "TicTacToe AI",
+        image: "/projects/tictactoe.png",
+        blurImage: "/projects/tictactoe.png",
+        description: "Unbeatable TicTacToe agent using Minimax algorithm.",
+        gradient: ["#0F2027", "#2C5364"],
+        url: "#",
+        tech: ["ai", "javascript"],
+        learnMoreLink:"/projects/tic-tac-toe"
+      },
+      {
+        name: "NIM AI Agent",
+        image: "/projects/nim.png",
+        blurImage: "/projects/nim.png",
+        description: "NIM game agent trained using reinforcement learning.",
+        gradient: ["#2b5876", "#4e4376"],
+        url: "#",
+        tech: ["python", "reinforcement-learning"],
+        learnMoreLink:"/projects/nim-ai"
+      },
+      {
+        name: "Crossword Puzzle Solver",
+        image: "/projects/crossword.png",
+        blurImage: "/projects/crossword.png",
+        description: "AI crossword solver using search algorithms.",
+        gradient: ["#FF416C", "#FF4B2B"],
+        url: "#",
+        tech: ["python", "ai"],
+        learnMoreLink:"/projects/crossword-solver"
+      },
+    ],
   },
   {
-    name: "Calculator Application in Java",
-    image: "/projects/calculator.png",
-    blurImage: "/projects/calculator.png",
-    description: "This is a fully functional calculator in java, designed to perform both simple and scientific operations. Code adheres to SOLID principles.",
-    gradient: ["#245B57", "#004741"],
-    url: "https://github.com/AzharAhmed-bot/OOP-Group-Project",
-    tech: ["sass"],
+    category: "👁️ Computer Vision",
+    icon: "👁️",
+    projects: [
+      {
+        name: "Pen Tracer",
+        image: "/projects/penOverview.png",
+        blurImage: "/projects/penOverview.png",
+        description: "Track and trace a pen in real-time using a camera.",
+        gradient: ["#56CCF2", "#2F80ED"],
+        url: "#",
+        tech: ["opencv", "python"],
+        learnMoreLink:"/projects/pen-tracer"
+      },
+      {
+        name: "Russian License Plate Detector",
+        image: "/projects/plate.png",
+        blurImage: "/projects/plate.png",
+        description: "Detects Russian car number plates using computer vision.",
+        gradient: ["#1CB5E0", "#000851"],
+        url: "#",
+        tech: ["opencv", "yolo", "python"],
+        learnMoreLink:"/projects/number-plate-detector"
+      },
+      {
+        name: "Traffic Sign Classifier",
+        image: "/projects/trafficsign.png",
+        blurImage: "/projects/trafficsign.png",
+        description:
+          "CNN trained on 43 classes to classify traffic signs accurately.",
+        gradient: ["#FF9966", "#FF5E62"],
+        url: "#",
+        tech: ["tensorflow", "python"],
+        learnMoreLink:"/projects/traffic-sign-cnn"
+      },
+    ],
   },
+  // {
+  //   category: "🎮 Games",
+  //   icon: "🎮",
+  //   projects: [
+  //     {
+  //       name: "ArcaneHonor",
+  //       image: "/projects/arcane.png",
+  //       blurImage: "/projects/arcane.png",
+  //       description: "A Unity game mixing Swahili & English narrative design.",
+  //       gradient: ["#C33764", "#1D2671"],
+  //       url: "#",
+  //       tech: ["unity", "csharp"],
+  //       learnMoreLink:"/projects/lostandfound"
+  //     },
+  //   ],
+  // },
   {
-    name: "Study Bud",
-    image: "/projects/studybud.png",
-    blurImage: "/projects/studybud.png",
-    description: "This is a java Application designed to help students with studying. I developed an algorithm that creates effective and accurate timetables and study sessions. This overally leads to improved academic performance",
-    gradient: ["#003052", "#167187"],
-    url: "https://github.com/AzharAhmed-bot/OOP_2_Project",
-    tech: ["sass"],
+    category: "📊 Machine Learning",
+    icon: "📊",
+    projects: [
+      {
+        name: "Titanic Survival Prediction",
+        image: "/projects/titanic.png",
+        blurImage: "/projects/titanic.png",
+        description:
+          "Predict survival on the Titanic using classic ML features and models.",
+        gradient: ["#43C6AC", "#191654"],
+        url: "#",
+        tech: ["pandas", "sklearn", "ml"],
+        learnMoreLink:"/projects/titanic-ml"
+      },
+    ],
   },
-  {
-    name: "QUASAR; ps: I wont be posting the github because the code is gate keeped for now",
-    image: "/projects/quasar.png",
-    blurImage: "/projects/quasar.png",
-    description: "Short form of Quantum-Augmented Secure Adaptive Response; As a team of 9 our role was to Develop an advanced AI-powered cybersecurity defense system leveraging quantum computing, machine learning, and blockchain technologies to provide real-time threat detection, automated response, and secure logging.",
-    gradient: ["#3A0000", "#771E1E"],
-    url: "https://azharaportfolio.netlify.app/",
-    tech: ["react", "fastapi", "typescript"],
-  },
- 
 ];
+
 
 export const SKILLS = {
   frontend: [
@@ -116,7 +244,7 @@ export const SKILLS = {
   ],
   backend:["flask","fastapi","postgresql","sqlite"],
   userInterface: ["figma", "wordpress"],
-  other: ["git","java"]
+  other: ["git","java","ai"]
 };
 
 export enum Branch {
