@@ -21,7 +21,10 @@
 }
 
 .ProjectImg {
-  @apply absolute top-0 rounded-xl shadow-xl;
+  position: absolute;
+  top: 0;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
 
   width: 16.8rem !important;
   transform: rotate(-22.5deg);
